@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+
+    "name": "Binary Decimal Hexadecimal Conversion",
+    "description": "This extension quickly converts between binary, hexadecimal and decimal input",
+    "version": "1.0",
+
+    "browser_action": {
+        "default_popup": "bdhConversion.html"
+    },
+    "permissions": [
+        "activeTab",
+        "https://ajax.googleapis.com/"
+    ]
+}

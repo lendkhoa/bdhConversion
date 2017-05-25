@@ -1,0 +1,58 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+      #status {
+        /* avoid an excessively wide status text */
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+    	#errorMsg {
+			color: red;
+			display: none;
+		}
+	 </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h4>Binary-Decimal-Hexadecimal Conversion </h4>
+	 <h5 id="errorMsg">Invalid values and/or types </h5>
+	 <table> 
+	 	<tr>
+			<td>
+				<select id="leftField">
+					<option value=1 selected>Decimal</option>
+					<option value=2>Binary</option>
+					<option value=3>Hexadecimal</option>
+				</select>
+			</td>
+			<td>
+				<select id="rightField">
+					<option value=1>Decimal</option>
+					<option value=2 selected>Binary</option>
+					<option value=3>Hexadecimal</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td><input type="text" id="leftValue"> </td>
+			<td><input type="text" id="rightValue"> </td>
+		</tr>
+	 </table>
+  	 <button id="convert"> Convert </button>
+    <script src="conversion.js"></script>
+  </body>
+</html>
+
